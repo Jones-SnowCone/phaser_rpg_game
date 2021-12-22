@@ -6,7 +6,7 @@ const server = http.createServer(app);
 
 app.set("port", 3000);
 
-app.use("/static", express.static(path.join(__dirname, "static", "css")));
+app.use(express.static(path.join(__dirname, "static", "css")));
 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
