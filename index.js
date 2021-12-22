@@ -4,12 +4,10 @@ const http = require("http");
 const path = require("path");
 const server = http.createServer(app);
 
-app.set("port", 3000);
-
-app.use(express.static(path.join(__dirname, "static", "css")));
+app.use(express.static("./"));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile((__dirname + "/index.html"));
 });
 
 server.listen(3000, () => {
