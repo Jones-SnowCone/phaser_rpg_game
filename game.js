@@ -3,7 +3,7 @@ const config = {
     parent: "phaser-example",
     width: 800,
     height: 600,
-    backgroundColor: "#ffffff",
+    backgroundColor: "#5cb786",
     physics: {
         default: "arcade",
         arcade: {
