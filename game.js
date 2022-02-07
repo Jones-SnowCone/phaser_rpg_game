@@ -21,11 +21,11 @@ const config = {
 var game = new Phaser.Game(config);
 
 function preload() {
-    this.load.image("test_character", "assets/test_character.png");
+    this.load.image("test_character", "static/assets/test_character.png");
 }
 
 function create() {
-    this.add.image(0, 10, "test_character");
+    let test_character = this.add.image(0, 10, "test_character").setOrigin(0,0);
 }
 
 function update() {
