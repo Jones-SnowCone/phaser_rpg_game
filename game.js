@@ -25,7 +25,7 @@ function preload() {
 }
 
 function create() {
-    let test_character = this.add.image(0, 10, "test_character").setOrigin(0,0);
+    let test_character = this.add.image(0, 0, "test_character").setOrigin(0,0);
 }
 
 function update() {
