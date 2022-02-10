@@ -20,6 +20,21 @@
                 Chat</button>
         </form>
     </div>
+    <!--
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form id="form" class="form-container" action="">
+            <h1>Chat</h1>
+
+            <label id="label" for="msg">Message</label>
+            <textarea id="input" placeholder="Type message..." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+    -->
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.min.js"></script>
@@ -30,6 +45,7 @@
     var form = document.getElementById("form");
     var input = document.getElementById("input");
     var chat = document.getElementById("chat");
+    var myForm = document.getElementById("myForm");
 
     form.addEventListener("submit", function (sumbitEvent) {
         sumbitEvent.preventDefault();
@@ -52,6 +68,14 @@
 
     function hideChat() {
         chat.style.display = "none";
+    }
+
+    function openForm() {
+        myForm.style.display = "block";
+    }
+
+    function closeForm() {
+        myForm.style.display = "none";
     }
 </script>
 
